@@ -129,3 +129,5 @@ We can again add this task as a custom script in npm via this addition to the `p
   ...
 }
 ```
+
+Run the development server with `npm run dev`. Open a web browser and go to http://localhost:8888 to see the website. If you now change a file in the `src/` directory then you can see how gulp immediately rebuilds the website so that you can now reload the website in the browser.
