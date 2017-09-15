@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build",
-    "dev": "gulp apimocker"
+    "build": "GIT_VERSION=$(git describe --tags --always --dirty) gulp build",
+    "dev": "GIT_VERSION=$(git describe --tags --always --dirty) gulp apimocker"
   },
   "author": "",
   "license": "ISC",

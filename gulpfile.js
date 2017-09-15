@@ -5,9 +5,20 @@ gulp.task('clean', function() {
   return require('del')(['out']);
 });
 
+const versioncss = `
+
+/* appended by gulp */
+#version::after {
+  content: "${ process.env.GIT_VERSION || "unknown GIT_VERSION" }";
+}
+#version:hover::after {
+  content: "${ process.env.VERSION || "unknown VERSION" }";
+}
+`
 gulp.task('build', ['clean'], function(){
   return gulp.src(['src/**'])
     .pipe($.if('*.js', $.rev()))
+    .pipe($.if('style.css', $.footer(versioncss)))
     .pipe($.if('*.css', $.rev()))
     .pipe($.revReplace())
     .pipe(gulp.dest('out'));
