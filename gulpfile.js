@@ -7,6 +7,9 @@ gulp.task('clean', function() {
 
 gulp.task('build', ['clean'], function(){
   return gulp.src(['src/**'])
+    .pipe($.if('*.js', $.rev()))
+    .pipe($.if('*.css', $.rev()))
+    .pipe($.revReplace())
     .pipe(gulp.dest('out'));
 })
 

@@ -25,3 +25,8 @@ html, body {
   margin-left: 1em;
   font-style: italic;
 }
+
+#main {
+  background-color: lightyellow;
+  padding: 1em;
+}
