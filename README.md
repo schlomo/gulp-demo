@@ -21,7 +21,7 @@ Create a directory for your project, e.g. `gulp-demo` and change to the director
 
 Let's create a source directory named `src` and add a simple website with an HTML file for the content, a CSS file for the styling and a JS file for browser-side code.
 
-You can simply copy my example [src](blob/master/src/) folder or add your own.
+You can simply copy my example [src](src/) folder or add your own.
 
 Open the `index.html` file in a browser to see that it works and looks like this:
 
